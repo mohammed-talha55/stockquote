@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "7c784f2c-087f-4d2f-bf84-8e8d4d2a538a",
+		"name": "StockQuote",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Quote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stockQuote\":\"XYZ\",\r\n    \"companyName\":\"XYZ Tech\",\r\n    \"price\":\"55\",\r\n    \"currency\":\"INR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/stockquotes/stockQuote/addQuote",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stockquotes",
+						"stockQuote",
+						"addQuote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all stocks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/stockquotes/stockQuote",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stockquotes",
+						"stockQuote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get mentioned stocks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/stockquotes/stockQuote/queryQuote?symbols=IBM,HCL",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"stockquotes",
+						"stockQuote",
+						"queryQuote"
+					],
+					"query": [
+						{
+							"key": "symbols",
+							"value": "IBM,HCL"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
